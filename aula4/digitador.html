@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Texto Dinâmico</title>
+</head>
+<body>
+
+  <input type="text" id="input-text">
+  Você está digitando "<span id="typed"></span>".
+
+  <script>
+  const input = document.getElementById("input-text");
+  const typed = document.getElementById("typed");
+
+  input.addEventListener("input", () => {
+    typed.textContent = input.value;
+  });
+</script>
+
+
+</body>
+</html>
